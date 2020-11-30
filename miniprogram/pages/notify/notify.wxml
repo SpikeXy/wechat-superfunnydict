@@ -1,0 +1,26 @@
+<!--miniprogram/pages/check.wxml-->
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">通知</view>
+</cu-custom>
+
+<view wx:if="{{hasData}}">
+	<view>
+		<van-cell-group wx:for="{{notifyList}}" wx:for-index="idx" wx:key="Id" wx:for-item="item" data-topic="{{item}}">
+			<van-cell  title="{{item.Content}}" value="{{item.ScoreWaveDescription}}" 
+            url="{{item.NavUrl}}" icon="{{item.IconName}}" />
+		</van-cell-group>
+
+	</view >
+	<view class="pageButtonClass">
+		<van-button bind:click="prePageClick" disabled="{{disablePre}}" type="primary">上一页</van-button>
+		<van-button bind:click="nextPageClick" disabled="{{disableNext}}" type="primary">下一页</van-button>
+	</view>
+</view>
+
+
+<view class="mainViewClass" wx:else>
+	<!-- 暂无需要审核的内容 -->
+	<image src="{{noDataImageUrl}}" mode="aspectFit" />
+</view>

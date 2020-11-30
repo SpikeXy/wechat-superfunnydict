@@ -1,0 +1,27 @@
+<!--miniprogram/pages/post/post.wxml-->
+
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">文章详情</view>
+</cu-custom>
+
+<view class="main-view">
+	<view class="title-class">
+		{{postEntity.Title}}
+	</view>
+
+	<view class="image-class">
+		<image src="{{imageUrl}}" mode="aspectFit"  webp="true" />
+	</view>
+	<view class="main-text-class" wx:if="{{postEntity.PassResult==1}}">
+		<text>审核结果：通过</text>
+		<text>通过比率：{{percentage}}</text>
+	</view>
+	<view class="main-text-class" wx:if="{{postEntity.PassResult==0}}">
+		<text>审核结果：不通过</text>
+		<text>不通过比率:{{percentage}}</text>
+		<text>原因：{{postEntity.RefuseTag}}</text>
+	</view>
+
+</view>

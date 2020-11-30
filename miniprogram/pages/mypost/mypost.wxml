@@ -1,0 +1,21 @@
+<!--miniprogram/pages/mypost/mypost.wxml-->
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的帖子</view>
+</cu-custom>
+
+
+<view>
+	<view>
+		<van-cell-group wx:for="{{postData}}" wx:for-index="idx" wx:key="Id" wx:for-item="item" data-topic="{{item}}">
+			<van-cell title="{{item.Title}}" value="点赞数  {{item.LikeCount}}" is-link url="{{item.NavUrl}}">
+			</van-cell>
+		</van-cell-group>
+	</view>
+
+	<view class="pageButtonClass">
+		<van-button bind:click="prePageClick" disabled="{{disablePre}}" type="primary">上一页</van-button>
+		<van-button bind:click="nextPageClick" disabled="{{disableNext}}" type="primary">下一页</van-button>
+	</view>
+</view>

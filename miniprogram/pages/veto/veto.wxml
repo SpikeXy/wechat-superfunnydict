@@ -1,0 +1,32 @@
+<!--miniprogram/pages/veto/veto.wxml-->
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">一票否决</view>
+</cu-custom>
+
+ <view class="mainViewClass" wx:if="{{canDisplayImage}}">
+
+	<view class="title-class">
+		<view span="24" i-class="col-class title-class">{{title}}</view>
+	</view>
+	<view>
+		<view span="24" i-class="col-class image-class">
+			<image src="{{imageUrl}}" mode="aspectFit" />
+		</view>
+	</view>
+	<view i-class='buttonClass'>
+		<view span="12" i-class="col-class">
+			<van-button bind:click="vetoClick" type="error" size="small">一票否决</van-button>
+		</view>
+	</view>
+</view> 
+
+ <view class="mainViewClass" wx:else>
+
+	<view >
+		<image class="noDataClass" src="{{noDataImageUrl}}" mode="aspectFit" />
+	</view>
+</view> 
+
+

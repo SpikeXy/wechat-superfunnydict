@@ -1,0 +1,28 @@
+<cu-custom bgColor="bg-black" isBack="{{false}}">
+	<view slot="content">超级开心辞典</view>
+</cu-custom>
+
+
+
+<view class="mainViewClass" wx:if="{{showData}}">
+		<swiper bindchange='changeCurrentItem' class="swiperClass"   indicator-dots="{{false}}" autoplay="{{false}}" style="height:100%;"
+			vertical="true" duration="500" >
+	
+			<swiper-item item-id="{{item._id}}" wx:for="{{listData}}" wx:key="_id">
+			<view style="position:fixed;left:10px;bottom:{{CustomBar}}px;font-size:{{StatusBarHeight}}px;z-index:1000;text-shadow:0.5rem 0rem 0.5rem #fdfdff, -0.5rem 0rem 0.5rem #fdfdff, 0rem 0.5rem 0.5rem #fdfdff, 0rem -0.5rem 0.5rem #fdfdff;">
+					{{item.Title}}
+				</view>
+				<view style="display:flex;height:{{swiperItemHeight}}px;align-items: center;background-color:#383c3c" >
+					<image src="{{item.Image}}" mode="widthFix" style="height:{{imageHight}}px;width:{{imageWidth}}px;"  webp="true" />
+				</view>
+			
+				<van-button bind:click="zanClick" disabled="{{item.IsLiked==1}}"  icon="good-job" size='normal' data-id="{{item._id}}"
+				style="position:fixed;right:10px;bottom:{{CustomBar}}px;font-size:{{StatusBarHeight}}px;z-index:1000;"
+				type="primary">{{item.LikeCount}}</van-button>
+			</swiper-item>
+
+		</swiper>
+</view>
+<view wx:else>
+		<image class="noDataClass" src="{{noDataImageUrl}}" mode="aspectFit" />
+	</view>

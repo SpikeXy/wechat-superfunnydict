@@ -1,0 +1,9 @@
+<!--miniprogram/pages/score/score.wxml-->
+
+
+<view>
+	<view class="score-Content-Class">
+			<view title="审核条目通过" value="+1"></view>
+			<view title="审核条目失败" value="-1"></view>
+	</view>
+</view>

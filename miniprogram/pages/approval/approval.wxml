@@ -1,0 +1,27 @@
+<!--miniprogram/pages/approval/approval.wxml-->
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">审批</view>
+</cu-custom>
+
+<view wx:if="{{haveData}}">
+
+			<!-- <image src="{{item.AvatarUrl}}" class="image-avatar-class" mode="aspectFit" /> -->
+			<view class="page__bd">
+				<view class="weui-cells">
+					<mp-slideview buttons="{{item.buttons}}" icon="{{true}}" wx:for-item="item"  wx:for="{{approvalDataList}}"   bindbuttontap="slideButtonTap">
+						<mp-cell data-userOpenId="{{item.UserOpenId}}" value="{{item.Name}}申请成为{{item.IdentityNameTarget}}" footer=""></mp-cell>
+					</mp-slideview>
+				</view>
+			</view>
+
+		<view class="pageButtonClass">
+			<van-button bind:click="prePageClick" disabled="{{disablePre}}" plain type="primary">上一页</van-button>
+			<van-button bind:click="nextPageClick" disabled="{{disableNext}}" plain type="primary">下一页</van-button>
+		</view>
+
+
+</view>
+<view wx:else>
+	<image class="noDataClass" src="{{noDataImageUrl}}" mode="aspectFit" />
+</view>

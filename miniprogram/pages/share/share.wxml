@@ -1,0 +1,30 @@
+<!--miniprogram/pages/share/share.wxml-->
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+  <view slot="backText">返回</view>
+	<view slot="content">分享</view>
+</cu-custom>
+
+
+<view class="mainView">
+  <view class="titleView">
+    <text class="title">感谢有你</text>
+  </view>
+  <view class="shareText">
+    <text>分享快乐，快乐加倍 \n 分享悲伤，悲伤减半</text>
+  </view>
+  <image src="{{imageQrUrl}}" mode="aspectFit" />
+</view>
+<van-button bind:click="downloadClick" type="primary" size="large">分享</van-button>
+
+
+<van-popup
+  show="{{ showPopup }}"
+  round
+  closeable
+  close-icon-position="top-left"
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClosePopup"
+>
+<van-button open-type="openSetting" bindopensetting="operateOpenSetting" size="large" type='primary'>设置相册授权</van-button>
+</van-popup>

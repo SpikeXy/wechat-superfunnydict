@@ -1,0 +1,21 @@
+/* miniprogram/pages/post/post.wxss */
+page{
+  height:80%;
+}
+.title-class{
+  margin-top: 4%;
+}
+.main-view{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: space-between;
+}
+.main-text-class{
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+}

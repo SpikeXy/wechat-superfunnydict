@@ -1,0 +1,24 @@
+<!--miniprogram/pages/about/about.wxml-->
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">关于我们</view>
+</cu-custom>
+
+<view>
+	<view wx:for="{{aboutText}}" class="aboutTextClass" wx:for-index="idx" wx:key="Id" wx:for-item="item" data-topic="{{item}}">
+		<text class="aboutTextClass">{{item}}</text>
+	</view>
+</view>
+<view class="commonClass">
+    <text>-------------------------\n</text>
+    <text>欢迎提供反馈 \n 意见被采纳会有实物奖品免费送</text>
+		<image src="{{feedbackQrUrl[0]}}" mode="widthFix" />
+		<image src="{{feedbackQrUrl[1]}}" mode="widthFix" />
+		<image src="{{feedbackQrUrl[2]}}" mode="widthFix" />
+</view>
+<view class="commonClass">
+    <text>-------------------------\n</text>
+<text>精美奖品</text>
+		<image src="{{feedbackQrUrl[3]}}" mode="widthFix" />
+		<image src="{{feedbackQrUrl[4]}}" mode="widthFix" />
+</view>

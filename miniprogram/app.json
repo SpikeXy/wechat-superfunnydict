@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/score/score",
+    "pages/notify/notify",
+    "pages/check/check",
+    "pages/mypost/mypost",
+    "pages/approval/approval",
+    "pages/myidentify/myidentify",
+    "pages/upload/upload",
+    "pages/post/post",
+    "pages/reopen/reopen",
+    "pages/veto/veto",
+    "pages/about/about",
+    "pages/share/share",
+    "pages/postsingle/index"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#425066",
+    "backgroundTextStyle": "light"
+  },
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+  
+    "weui": true
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#7A7E83",
+    "selectedColor": "#ffffff",
+    "borderStyle": "black",
+    "backgroundColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index_unclicked.png",
+        "selectedIconPath": "image/index_click.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/my_unclick.png",
+        "selectedIconPath": "image/my_click.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "component/colorui/components/cu-custom",
+    "van-button": "component/@vant/weapp/button/index",
+    "van-sidebar": "component/@vant/weapp/sidebar/index",
+    "van-sidebar-item": "component/@vant/weapp/sidebar-item/index",
+    "van-uploader": "component/@vant/weapp/uploader/index",
+    "van-index-bar": "component/@vant/weapp/index-bar/index",
+    "van-index-anchor": "component/@vant/weapp/index-anchor/index",
+    "van-grid": "component/@vant/weapp/grid/index",
+    "van-grid-item": "component/@vant/weapp/grid-item/index",
+    "van-field": "component/@vant/weapp/field/index",
+    "van-popup": "component/@vant/weapp/popup/index",
+    "van-swipe-cell": "component/@vant/weapp/swipe-cell/index",
+    "van-image": "component/@vant/weapp/image/index",
+    "van-dropdown-menu": "component/@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "component/@vant/weapp/dropdown-item/index",
+    "van-icon": "component/@vant/weapp/icon/index",
+    "van-cell": "component/@vant/weapp/cell/index",
+    "van-cell-group": "component/@vant/weapp/cell-group/index",
+    "van-divider": "component/@vant/weapp/divider/index",
+    "van-steps": "component/@vant/weapp/steps/index",
+    "van-overlay": "component/@vant/weapp/overlay/index",
+    "van-nav-bar": "component/@vant/weapp/nav-bar/index"
+  }
+}

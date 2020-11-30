@@ -1,0 +1,19 @@
+/* miniprogram/pages/reopen/reopen.wxss */
+
+.mainViewClass{
+  text-align: center;
+  height: 100%;
+}
+.title-class{
+  font-size:20px;
+  margin-top:15px;
+}
+.bottomClass{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.bottomClass button{
+  width:150px;
+}

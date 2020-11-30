@@ -1,0 +1,29 @@
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">重开帖子</view>
+</cu-custom>
+
+<view class="mainViewClass" wx:if="{{canDisplayImage}}">
+
+	<view class="title-class">
+		<view span="24" i-class="col-class title-class">{{title}}</view>
+	</view>
+	<view>
+		<view span="24" i-class="col-class image-class">
+			<image src="{{imageUrl}}" mode="aspectFit" />
+		</view>
+	</view>
+	<view i-class='bottomClass'>
+			<van-button bind:click="finallyDeleteClick" type="error" size="small">彻底删除</van-button>
+      <van-button bind:click="reopenClick" type="success" size="small">重新开放</van-button>
+	</view>
+</view>
+
+<view class="mainViewClass" wx:else>
+
+	<view >
+		<!-- 暂无需要审核的内容 -->
+		<image class="noDataClass" src="{{noDataImageUrl}}" mode="aspectFit" />
+	</view>
+</view>

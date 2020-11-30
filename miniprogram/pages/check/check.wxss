@@ -1,0 +1,50 @@
+/* miniprogram/pages/check.wxss */
+page{
+  height:80%;
+}
+
+.mainViewClass{
+  height:100%;
+  text-align: center!important;
+}
+.vanButtonLeft{
+  width:50%;
+}
+.vanButtonRight{
+  width:50%;
+}
+.downButtonClass{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.vanButtonClass{
+  margin-bottom:1px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.rightBarCustom{
+  background-color: yellow;
+   width:100px;
+   height:500px;
+   display: flex;
+   justify-content: start;
+   flex-direction: column;
+}
+page{
+  height: 100%;
+}
+.title-class{
+  margin-top:20px;
+  text-align: center;
+}
+.image-class{
+  margin-top:20px;
+  text-align: center;
+}

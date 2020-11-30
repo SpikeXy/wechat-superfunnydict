@@ -1,0 +1,24 @@
+<!--miniprogram/pages/upload/upload.wxml-->
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">发帖</view>
+</cu-custom>
+
+<view class="page">
+	<van-cell-group>
+			<van-field label="词语名称" model:value="{{ titleValue }}" placeholder="输入名称" border="{{ false }}" />
+		<van-cell>
+			<van-divider />
+			<view class="page__bd">
+
+				<mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}"
+					files="{{files}}" max-count="1" title="图片上传" tips="{{imageUploadTip}}">
+				</mp-uploader>
+
+			</view>
+		</van-cell>
+		<van-cell style="display:flex;justify-content:center;">
+				<van-button bind:click="submitClick" type="primary" size="normal" >提交</van-button>
+		</van-cell>
+	</van-cell-group>
+</view>

@@ -1,0 +1,17 @@
+<!--miniprogram/pages/myidentify/myidentify.wxml-->
+
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的身份</view>
+</cu-custom>
+
+
+<view>
+
+	<van-steps steps="{{ identityData }}" active="{{ verticalCurrent }}" direction="vertical" active-color="#CA6924" />
+
+	<van-button style="width:100%;position: fixed; bottom: 0; " disabled="{{userUpgradeState==1}}" bind:click="applyForUpgrade" size="large" type="primary">{{userUpgradeText}}
+	</van-button>
+
+
+</view>

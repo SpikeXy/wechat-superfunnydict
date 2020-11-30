@@ -1,0 +1,10 @@
+/* miniprogram/pages/about/about.wxss */
+
+.aboutTextClass{
+  width: 90%;
+  padding-left: 5%;
+  text-align: left;
+}
+.commonClass{
+  text-align: center;
+}

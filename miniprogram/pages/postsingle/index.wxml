@@ -1,0 +1,16 @@
+
+<cu-custom bgColor="bg-black" isBack="{{false}}">
+	<view slot="content">超级开心辞典</view>
+</cu-custom>
+
+<view class="main-view">
+	<view class="title-class">
+		{{postEntity.Title}}
+	</view>
+
+	<view class="image-class">
+		<image src="{{imageUrl}}" mode="aspectFit"  webp="true" />
+	</view>
+	<van-button bind:click="returnIndexClick" size='large' type='primary' class="vanBtn">返回首页</van-button>
+</view>
+

@@ -1,0 +1,19 @@
+/* miniprogram/pages/veto/veto.wxss */
+
+.mainViewClass{
+  height:100%;
+  text-align: center!important;
+  margin-top:80rpx;
+}
+
+.title-class{
+  font-size:20px;
+}
+
+.buttonClass{
+  display: flex;
+  justify-content: center;
+}
+.buttonClass button{
+  width: 200rpx;
+}

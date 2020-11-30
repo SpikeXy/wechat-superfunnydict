@@ -1,0 +1,26 @@
+/* miniprogram/pages/approval/approval.wxss */
+.van-swipe-cell__right_pass{
+  background-color: #07c160;
+}
+.van-swipe-cell__right_refuse{
+  background-color: #ee0a24;
+}
+.pageButtonClass{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom:2px;
+}
+.image-avatar-class{
+  height: 80px;
+  width: 50px;
+}
+page{
+  height:100%;
+}
+
+.left-swipe-class{
+  display: flex;
+  align-items: center;
+}

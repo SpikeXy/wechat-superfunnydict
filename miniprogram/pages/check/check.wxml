@@ -1,0 +1,38 @@
+<!--miniprogram/pages/check.wxml-->
+<cu-custom bgColor="bg-black" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">审核</view>
+</cu-custom>
+
+<view class="mainViewClass" wx:if="{{canDisplayImage}}">
+
+	<view class="title-class">
+		<view span="24" i-class="col-class title-class">{{title}}</view>
+	</view>
+	<view>
+		<view span="24" i-class="col-class image-class">
+			<image src="{{imageUrl}}" mode="aspectFit" webp="{{true}}" />
+		</view>
+	</view>
+	<view class="downButtonClass">
+			<van-button class='vanButtonLeft' bind:click="passClick" type="primary" block size="large">通过</van-button>
+			<van-button class='vanButtonRight' bind:click="openRefuseClick" type="danger" block size="large">拒绝</van-button>
+	</view>
+
+
+	<van-overlay show="{{ showRight1 }}" bind:click="closeHidden">
+		<view class="wrapper">
+			<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" class="rightBarCustom">
+			<view wx:for="{{refuseReason}}" wx:for-index="idx" wx:key="Id" wx:for-item="item" data-topic="{{item}}"
+				bindtap="refuseClick" data-refuse="{{item}}">
+				<van-button custom-class="vanButtonClass" square  size='large' type="danger">{{item}}</van-button>
+			</view>
+		</scroll-view>
+		</view>
+	</van-overlay>
+</view>
+
+<view class="mainViewClass" wx:else>
+	<!-- 暂无需要审核的内容 -->
+	<image src="{{noDataImageUrl}}" mode="aspectFit" />
+</view>

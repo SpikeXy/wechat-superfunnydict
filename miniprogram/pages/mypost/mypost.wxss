@@ -1,0 +1,11 @@
+/* miniprogram/pages/mypost/mypost.wxss */
+
+.pageButtonClass{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom:0px;
+
+}
+

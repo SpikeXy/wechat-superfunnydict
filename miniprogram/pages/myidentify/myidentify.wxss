@@ -1,0 +1,10 @@
+/* miniprogram/pages/myidentify/myidentify.wxss */
+.description-class{
+  white-space: pre-line;
+  line-height: 27px;
+  width: 90%;
+}
+custom-button{
+  position: fixed;
+  bottom:0;
+}

@@ -1,0 +1,4 @@
+/* miniprogram/pages/upload/upload.wxss */
+.page__bd{
+  margin-top: 20px;
+}

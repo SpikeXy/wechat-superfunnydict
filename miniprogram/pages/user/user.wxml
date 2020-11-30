@@ -1,0 +1,47 @@
+
+<cu-custom bgColor="bg-black" isBack="{{false}}">
+	<view slot="content">我的</view>
+</cu-custom>
+
+<view class="mainView" style="height:{{viewHeight}}">
+	<view>
+		<view>
+			<view wx:if="{{isHide}}">
+				<button class='bottom' disabled="{{isClickGetUserInfo}}" type='primary' open-type="getUserInfo" lang="zh_CN"
+					bindgetuserinfo="bindGetUserInfo">
+					授权登录
+				</button>
+			</view>
+			<view class="avatar-class" wx:else>
+
+				<van-image round width="90rpx" height="90rpx" src="{{avatarLink}}" />
+				<text>|</text>
+				<text>{{userName}}</text>
+			</view>
+		</view>
+		<view wx:if="{{!isHide}}">
+			<van-cell-group>
+				<van-cell title="发帖" icon="add-o" is-link url="/pages/upload/upload" />
+				<van-cell title="审核帖子" icon="eye-o" is-link url="/pages/check/check" />
+				<van-cell title="典值" icon="gold-coin-o" value="{{myScore}}" />
+				<van-cell title="我的发布" icon="notes-o" value="{{myPostCount}}" is-link url="/pages/mypost/mypost" />
+				<van-cell icon="bullhorn-o" title="通知" is-link url="/pages/notify/notify" />
+				<van-cell icon="contact" title="我的身份" value="{{myIdentityName}}" is-link url="/pages/myidentify/myidentify" />
+				<van-cell icon="close" wx:if="{{ isTencentTest ||  identityId==3}}" title="否决帖子" is-link
+					url="/pages/veto/veto" />
+				<van-cell icon="replay" wx:if="{{ isTencentTest || identity==4}}" title="重开帖子" is-link
+					url="/pages/reopen/reopen" />
+				<van-cell icon="friends-o" title="审批用户" value="{{myApprovalValue}}" is-link url="/pages/approval/approval" />
+				<van-cell icon="invition" title="关于" is-link url="/pages/about/about" />
+				<van-cell icon="share" title="分享" is-link url="/pages/share/share" />
+			</van-cell-group>
+		</view>
+		<view wx:else>
+			<van-cell-group>
+				<van-cell icon="invition" title="关于" />
+				<van-cell icon="share" title="分享" />
+			</van-cell-group>
+		</view>
+
+	</view>
+</view>
